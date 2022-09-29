@@ -1,0 +1,22 @@
+﻿@model MvcCV1.Models.Entity.Admin
+
+@{
+    ViewBag.Title = "AddAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h1>Education Ekleme Paneli</h1>
+<br />
+<form method="post">
+    @*@Html.Label("Login ID")
+    @Html.TextBoxFor(x => x.LoginID, new { @class = "form-control" })*@
+    <br />
+    @Html.Label("UserName")
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Password")
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-primary">Kaydet</button>
+</form>
+

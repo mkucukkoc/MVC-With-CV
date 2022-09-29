@@ -1,0 +1,66 @@
+﻿@using MvcCV1.Models.Entity
+@model List<Certificate>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header p-2">
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-pane" id="timeline">
+                                <div class="timeline timeline-inverse">
+
+                                    @foreach (var item in Model)
+                                    {
+                                        <div class="time-label">
+                                            <span class="bg-success">
+                                                @item.Date
+                                            </span>
+                                        </div>
+                                        <div>
+                                            @*<i class="fas fa-comment bg-primary"></i>*@
+                                            <div class="timeline-item">
+                                                <h3 class="timeline-header"><a href="#">@item.Institution</a></h3>
+                                                <div class="timeline-body">
+                                                    @item.Description
+                                                </div>
+                                                <div class="timeline-footer">
+                                                    @*<a href="/Certificate/EditCertificate/@item.CertficiateID/" class="btn btn-outline-warning"><i class="fas fa-trash"></i>Sil</a>
+                            <a href="/Certificate/EditCertificate/@item.CertficiateID/" class="btn btn-outline-primary"><i class="fas fa-pencil-alt"></i>Düzenle</a>*@
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="/Certificate/DeleteCertificate/@item.CertficiateID/" class="btn btn-outline-warning"><i class="fas fa-trash"></i>Sil</a>
+                                                                </td>
+                                                                <td>
+                                                                    <a href="/Certificate/EditCertificate/@item.CertficiateID/" class="btn btn-outline-primary"><i class="fas fa-pencil-alt"></i>Güncelle</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                                <a href="/Certificate/AddCertificate" class="btn btn-outline-primary">Add Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+

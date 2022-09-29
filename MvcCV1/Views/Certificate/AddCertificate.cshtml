@@ -1,0 +1,31 @@
+﻿@model MvcCV1.Models.Entity.Certificate
+
+@{
+    ViewBag.Title = "AddCertificate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h1>Certificate Ekleme Paneli</h1>
+<br />
+<form method="post">
+    @Html.Label("Description")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Date")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.Label("Institution")
+    @Html.TextBoxFor(x => x.Institution, new { @class = "form-control" })
+    <br />
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <button class="btn btn-outline-primary"><i class="fas fa-airbnb"></i>Kaydet</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+

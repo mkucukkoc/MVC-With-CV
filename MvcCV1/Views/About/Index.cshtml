@@ -1,0 +1,43 @@
+﻿@using MvcCV1.Models.Entity
+@model List<About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>About List</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Adress</th>
+        <th>Phone</th>
+        <th>Mail</th>
+        <th>Description</th>
+        <th>Sil</th>
+        <th>Düzenle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.AboutID</th>
+            <th>@item.Name</th>
+            <th>@item.Surname</th>
+            <th>@item.Address</th>
+            <th>@item.Phone</th>
+            <th>@item.Mail</th>
+            <th>@item.Description</th>
+            <th><a href="/About/DeleteAbout/@item.AboutID/" class="btn btn-outline-danger">Sil</a></th>
+            <th><a href="/About/EditAbout/@item.AboutID/" class="btn btn-outline-primary">Düzenle</a></th>
+        </tr>
+    }
+</table>
+<a href="/About/AddAbout/" class="btn btn-outline-info">Yeni Hakkında BirŞey Ekle</a>
+
+
+
+
+
+

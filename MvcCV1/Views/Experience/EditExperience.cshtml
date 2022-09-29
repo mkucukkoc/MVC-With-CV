@@ -1,0 +1,27 @@
+﻿@model MvcCV1.Models.Entity.Experience
+@{
+    ViewBag.Title = "EditExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h1>Deneyim Güncelleme Paneli</h1>
+<br />
+<form method="post">
+    @Html.Label("Experience ID")
+    @Html.TextBoxFor(x => x.ExperienceID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Title")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Subtitle")
+    @Html.TextBoxFor(x => x.Subtitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Date")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.Label("Description")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-primary">Kaydet</button>
+</form>
+

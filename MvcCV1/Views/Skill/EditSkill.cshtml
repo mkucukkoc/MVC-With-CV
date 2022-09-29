@@ -1,0 +1,23 @@
+﻿@model MvcCV1.Models.Entity.Skills
+@{
+    ViewBag.Title = "EditSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h1>Skill Güncelleme Paneli</h1>
+<br />
+<form method="post">
+    @Html.Label("SkillID")
+    @Html.TextBoxFor(x => x.SkillID, new { @class = "form-control" })
+    <br />
+    @Html.Label("SkillName")
+    @Html.TextBoxFor(x => x.SkillName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Status1")
+    @Html.TextBoxFor(x => x.Status1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-primary">Kaydet</button>
+</form>
+
+
+

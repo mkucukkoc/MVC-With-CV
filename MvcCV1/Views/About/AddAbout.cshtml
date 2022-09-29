@@ -1,0 +1,43 @@
+﻿@model MvcCV1.Models.Entity.About
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h1>Education Ekleme Paneli</h1>
+<br />
+<form method="post">
+    <br />
+    @Html.Label("Name")
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    @Html.Label("Surname")
+    @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+    <br />
+    @Html.Label("Address")
+    @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+    <br />
+    @Html.Label("Phone")
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+    <br />
+    @Html.Label("Mail")
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    @Html.Label("Description")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Url")
+    @Html.TextBoxFor(x => x.Url, new { @class = "form-control" })
+    <br />
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <button class="btn btn-outline-primary"><i class="fas fa-certificate"></i>Kaydet</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+

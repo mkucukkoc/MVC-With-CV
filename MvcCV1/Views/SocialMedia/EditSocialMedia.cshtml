@@ -1,0 +1,36 @@
+﻿
+@model MvcCV1.Models.Entity.SocialMedia
+@{
+    ViewBag.Title = "EditSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h1>Social Media Güncelleme Paneli</h1>
+<br />
+<form method="post">
+    @Html.Label("Social ıD")
+    @Html.TextBoxFor(x => x.SocialMediaID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Social Media Name")
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    @Html.Label("Link")
+    @Html.TextBoxFor(x => x.Link, new { @class = "form-control" })
+    <br />
+    @Html.Label("Icon")
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control" })
+    <br />
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <button class="btn btn-outline-primary"><i class="fas fa-american-sign-language-interpreting"></i>Güncelle</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</form>
+
+
+
